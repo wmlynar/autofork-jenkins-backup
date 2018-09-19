@@ -61,7 +61,7 @@
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd java/sm-lib-parent/sm-lib
-mvn install -Pcrap4j
+mvn cobertura:cobertura install -Pcrap4j
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
