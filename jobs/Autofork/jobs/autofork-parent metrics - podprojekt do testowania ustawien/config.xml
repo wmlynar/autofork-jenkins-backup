@@ -320,6 +320,12 @@ sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</
       <reportPattern>**/target/site/crap4j-reports/report.xml</reportPattern>
       <healthThreshold></healthThreshold>
     </hudson.plugins.crap4j.Crap4JPublisher>
+    <hudson.plugins.covcomplplot.CovComplPlotPublisher plugin="covcomplplot@1.1.1">
+      <analyzer>Cobertura</analyzer>
+      <verbose>false</verbose>
+      <excludeGetterSetter>true</excludeGetterSetter>
+      <locateTopMost>true</locateTopMost>
+    </hudson.plugins.covcomplplot.CovComplPlotPublisher>
   </publishers>
   <buildWrappers/>
 </project>
