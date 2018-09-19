@@ -55,7 +55,8 @@ mvn clean install -Pjacoco</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd java
-mvn cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle jdepend:generate</command>
+mvn cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle
+#mvn jdepend:generate</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
