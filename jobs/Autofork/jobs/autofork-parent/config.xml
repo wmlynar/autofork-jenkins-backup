@@ -95,7 +95,7 @@
     <io.jenkins.plugins.coverage.CoveragePublisher plugin="code-coverage-api@1.0.5">
       <adapters>
         <io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
-          <path>target/jacoco.exec</path>
+          <path>**/target/jacoco.exec</path>
           <thresholds class="linked-list"/>
         </io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
       </adapters>
