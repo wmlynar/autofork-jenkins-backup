@@ -52,9 +52,12 @@
     <hudson.tasks.Shell>
       <command>cd java/autofork-canbox-parent/autofork-canbox-stateful-2
 mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install -Pcrap4j
-sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc
+
 #mvn cobertura:cobertura - does not work with java 8
 #mvn jdepend:generate</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
