@@ -53,7 +53,7 @@
       <command>cd java
 mvn clean install -Pjacoco
 mvn findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle
-sloccount --duplicates --wide --details src/main/java &amp;gt; target/sloccount.sc
+sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc
 #mvn cobertura:cobertura
 #mvn jdepend:generate</command>
     </hudson.tasks.Shell>
