@@ -68,7 +68,6 @@ mvn install -Pcrap4j
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd java/sm-lib-parent/sm-lib
-# must be in separate build step otherwise it fails
 sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</command>
     </hudson.tasks.Shell>
   </builders>
