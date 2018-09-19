@@ -109,7 +109,7 @@ sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</
       <buildOverBuild>false</buildOverBuild>
     </hudson.plugins.jacoco.JacocoPublisher>
     <hudson.plugins.cobertura.CoberturaPublisher plugin="cobertura@1.13">
-      <coberturaReportFile>**/target/site/cobertura.xml</coberturaReportFile>
+      <coberturaReportFile>**/target/site/cobertura/cobertura.xml</coberturaReportFile>
       <onlyStable>false</onlyStable>
       <failUnhealthy>false</failUnhealthy>
       <failUnstable>false</failUnstable>
