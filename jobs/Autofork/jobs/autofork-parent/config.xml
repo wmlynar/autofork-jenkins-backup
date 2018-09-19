@@ -51,21 +51,11 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java
-mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+#mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <io.jenkins.plugins.coverage.CoveragePublisher plugin="code-coverage-api@1.0.5">
-      <adapters class="linked-list"/>
-      <globalThresholds class="linked-list"/>
-      <failUnhealthy>false</failUnhealthy>
-      <failUnstable>false</failUnstable>
-      <failNoReports>false</failNoReports>
-      <sourceFileResolver>
-        <level>NEVER_STORE</level>
-      </sourceFileResolver>
-    </io.jenkins.plugins.coverage.CoveragePublisher>
     <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.25">
       <testResults>**/target/surefire-reports/*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
@@ -102,6 +92,21 @@ mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install
       <deltaClassCoverage>0</deltaClassCoverage>
       <buildOverBuild>false</buildOverBuild>
     </hudson.plugins.jacoco.JacocoPublisher>
+    <io.jenkins.plugins.coverage.CoveragePublisher plugin="code-coverage-api@1.0.5">
+      <adapters>
+        <io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
+          <path>target/jacoco.exec</path>
+          <thresholds class="linked-list"/>
+        </io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
+      </adapters>
+      <globalThresholds class="linked-list"/>
+      <failUnhealthy>false</failUnhealthy>
+      <failUnstable>false</failUnstable>
+      <failNoReports>false</failNoReports>
+      <sourceFileResolver>
+        <level>NEVER_STORE</level>
+      </sourceFileResolver>
+    </io.jenkins.plugins.coverage.CoveragePublisher>
   </publishers>
   <buildWrappers/>
 </project>
