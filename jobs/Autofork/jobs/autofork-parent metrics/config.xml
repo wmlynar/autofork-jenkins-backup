@@ -301,6 +301,10 @@ sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc
       <numBuildsInGraph>0</numBuildsInGraph>
       <ignoreBuildFailure>false</ignoreBuildFailure>
     </hudson.plugins.sloccount.SloccountPublisher>
+    <hudson.plugins.crap4j.Crap4JPublisher plugin="crap4j@0.9">
+      <reportPattern>**/target/site/crap4j-reports/report.xml</reportPattern>
+      <healthThreshold></healthThreshold>
+    </hudson.plugins.crap4j.Crap4JPublisher>
   </publishers>
   <buildWrappers/>
 </project>
