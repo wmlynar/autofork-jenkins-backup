@@ -52,7 +52,7 @@
     <hudson.tasks.Shell>
       <command>cd java
 mvn clean install -Pjacoco
-sloccount --duplicates --wide --details src/main/java &amp;gt; target/sloccount.sc</command>
+sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
