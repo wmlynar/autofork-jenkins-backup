@@ -50,7 +50,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd java/sm-lib-parent/sm-lib
+      <command>cd java/autofork-ui-parent
 mvn install -Pjenkins1
 
 #mvn org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install
@@ -62,12 +62,12 @@ mvn install -Pjenkins1
 #mvn jdepend:generate</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>cd java/sm-lib-parent/sm-lib
+      <command>cd java/autofork-ui-parent
 mvn install -Pcrap4j
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>cd java/sm-lib-parent/sm-lib
+      <command>cd java/autofork-ui-parent
 sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</command>
     </hudson.tasks.Shell>
   </builders>
