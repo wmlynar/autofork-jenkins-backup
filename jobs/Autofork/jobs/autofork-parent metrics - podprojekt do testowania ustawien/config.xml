@@ -51,7 +51,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java/sm-lib-parent/sm-lib
-mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install
+mvn org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install
 
 # does not work with java 8
 #mvn cobertura:cobertura
