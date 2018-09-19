@@ -51,7 +51,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java
-mvn install</command>
+mvn clean install -Pjacoco</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>mvn cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle jdepend:generate</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
