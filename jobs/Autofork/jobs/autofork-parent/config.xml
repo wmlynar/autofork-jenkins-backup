@@ -51,8 +51,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java
-#mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install
-</command>
+mvn clean install</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -62,51 +61,6 @@
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.plugins.jacoco.JacocoPublisher plugin="jacoco@3.0.3">
-      <execPattern>**/**.exec</execPattern>
-      <classPattern>**/classes</classPattern>
-      <sourcePattern>**/src/main/java</sourcePattern>
-      <sourceInclusionPattern>**/*.java</sourceInclusionPattern>
-      <sourceExclusionPattern></sourceExclusionPattern>
-      <inclusionPattern></inclusionPattern>
-      <exclusionPattern></exclusionPattern>
-      <skipCopyOfSrcFiles>false</skipCopyOfSrcFiles>
-      <minimumInstructionCoverage>0</minimumInstructionCoverage>
-      <minimumBranchCoverage>0</minimumBranchCoverage>
-      <minimumComplexityCoverage>0</minimumComplexityCoverage>
-      <minimumLineCoverage>0</minimumLineCoverage>
-      <minimumMethodCoverage>0</minimumMethodCoverage>
-      <minimumClassCoverage>0</minimumClassCoverage>
-      <maximumInstructionCoverage>0</maximumInstructionCoverage>
-      <maximumBranchCoverage>0</maximumBranchCoverage>
-      <maximumComplexityCoverage>0</maximumComplexityCoverage>
-      <maximumLineCoverage>0</maximumLineCoverage>
-      <maximumMethodCoverage>0</maximumMethodCoverage>
-      <maximumClassCoverage>0</maximumClassCoverage>
-      <changeBuildStatus>false</changeBuildStatus>
-      <deltaInstructionCoverage>0</deltaInstructionCoverage>
-      <deltaBranchCoverage>0</deltaBranchCoverage>
-      <deltaComplexityCoverage>0</deltaComplexityCoverage>
-      <deltaLineCoverage>0</deltaLineCoverage>
-      <deltaMethodCoverage>0</deltaMethodCoverage>
-      <deltaClassCoverage>0</deltaClassCoverage>
-      <buildOverBuild>false</buildOverBuild>
-    </hudson.plugins.jacoco.JacocoPublisher>
-    <io.jenkins.plugins.coverage.CoveragePublisher plugin="code-coverage-api@1.0.5">
-      <adapters>
-        <io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
-          <path>**/target/jacoco.exec</path>
-          <thresholds class="linked-list"/>
-        </io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
-      </adapters>
-      <globalThresholds class="linked-list"/>
-      <failUnhealthy>false</failUnhealthy>
-      <failUnstable>false</failUnstable>
-      <failNoReports>false</failNoReports>
-      <sourceFileResolver>
-        <level>NEVER_STORE</level>
-      </sourceFileResolver>
-    </io.jenkins.plugins.coverage.CoveragePublisher>
   </publishers>
   <buildWrappers/>
 </project>
