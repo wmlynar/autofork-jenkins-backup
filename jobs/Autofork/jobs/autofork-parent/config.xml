@@ -58,6 +58,9 @@ mvn clean install -Pjacoco</command>
 mvn cobertura:cobertura findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle
 #mvn jdepend:generate</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>sloccount --duplicates --wide --details src/main/java &amp;gt; target/sloccount.sc</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers/>
