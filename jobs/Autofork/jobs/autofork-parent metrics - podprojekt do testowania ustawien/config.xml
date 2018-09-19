@@ -51,7 +51,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java/sm-lib-parent/sm-lib
-mvn org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install
+#mvn org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install
 
 # does not work with java 8
 #mvn cobertura:cobertura
@@ -60,11 +60,13 @@ mvn org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:c
 #mvn jdepend:generate</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>mvn install -Pcrap4j
+      <command>cd java/sm-lib-parent/sm-lib
+mvn install -Pcrap4j
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command># must be in separate build step otherwise it fails
+      <command>cd java/sm-lib-parent/sm-lib
+# must be in separate build step otherwise it fails
 sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</command>
     </hudson.tasks.Shell>
   </builders>
