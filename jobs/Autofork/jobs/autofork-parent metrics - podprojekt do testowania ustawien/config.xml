@@ -311,7 +311,7 @@ sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</
       <analyzer>Cobertura</analyzer>
       <verbose>false</verbose>
       <excludeGetterSetter>true</excludeGetterSetter>
-      <locateTopMost>true</locateTopMost>
+      <locateTopMost>false</locateTopMost>
     </hudson.plugins.covcomplplot.CovComplPlotPublisher>
   </publishers>
   <buildWrappers/>
