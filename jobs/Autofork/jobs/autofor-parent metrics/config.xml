@@ -316,12 +316,7 @@ sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</
       <locateTopMost>false</locateTopMost>
     </hudson.plugins.covcomplplot.CovComplPlotPublisher>
     <io.jenkins.plugins.coverage.CoveragePublisher plugin="code-coverage-api@1.0.5">
-      <adapters>
-        <io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
-          <path>**/target/site/jacoco/jacoco.xml</path>
-          <thresholds class="linked-list"/>
-        </io.jenkins.plugins.coverage.adapter.JacocoReportAdapter>
-      </adapters>
+      <adapters class="linked-list"/>
       <globalThresholds class="linked-list"/>
       <failUnhealthy>false</failUnhealthy>
       <failUnstable>false</failUnstable>
