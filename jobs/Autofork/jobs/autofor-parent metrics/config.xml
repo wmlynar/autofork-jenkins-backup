@@ -19,7 +19,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
@@ -46,18 +45,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd java/autofork-ui-parent
+      <command>cd java
 mvn clean install -Pjenkins
 
 #mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>cd java/autofork-ui-parent
+      <command>cd java
 mvn install -Pjenkins-crapertura
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
-      <command>cd java/autofork-ui-parent
+      <command>cd java
 sloccount --duplicates --wide --details src/main/java &gt; target/sloccount.sc</command>
     </hudson.tasks.Shell>
   </builders>
