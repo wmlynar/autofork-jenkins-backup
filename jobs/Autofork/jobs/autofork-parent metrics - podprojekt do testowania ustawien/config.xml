@@ -51,11 +51,11 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java/autofork-ui-parent
-mvn install -Pjenkins1</command>
+mvn clean install -Pjenkins</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd java/autofork-ui-parent
-mvn clean install -Pjenkins-crapertura
+mvn install -Pjenkins-crapertura
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
