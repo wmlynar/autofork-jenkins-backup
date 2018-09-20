@@ -46,7 +46,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java/autofork-ui-parent
-mvn clean install -Pjenkins</command>
+mvn clean install -Pjenkins
+
+#mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd java/autofork-ui-parent
