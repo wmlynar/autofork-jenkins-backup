@@ -55,7 +55,7 @@ mvn install -Pjenkins1</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd java/autofork-ui-parent
-mvn install -Pjenkins-crapertura
+mvn clean install -Pjenkins-crapertura
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
