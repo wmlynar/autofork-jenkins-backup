@@ -51,19 +51,11 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java/autofork-ui-parent
-mvn install -Pjenkins1
-
-#mvn org.jacoco:jacoco-maven-plugin:prepare-agent findbugs:findbugs pmd:pmd pmd:cpd checkstyle:checkstyle install
-
-# does not work with java 8
-#mvn cobertura:cobertura
-
-# why is it disabled?
-#mvn jdepend:generate</command>
+mvn install -Pjenkins1</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>cd java/autofork-ui-parent
-mvn install -Pcrap4j
+mvn install -Pjenkins-crapertura
 </command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
