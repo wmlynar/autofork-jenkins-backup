@@ -61,6 +61,15 @@ mvn clean install deploy</command>
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
+    <tools.devnull.jenkins.plugins.buildnotifications.SlackNotifier plugin="build-notifications@1.5.0">
+      <globalTarget></globalTarget>
+      <successfulTarget></successfulTarget>
+      <brokenTarget></brokenTarget>
+      <stillBrokenTarget></stillBrokenTarget>
+      <fixedTarget></fixedTarget>
+      <sendIfSuccess>false</sendIfSuccess>
+      <extraMessage></extraMessage>
+    </tools.devnull.jenkins.plugins.buildnotifications.SlackNotifier>
   </publishers>
   <buildWrappers/>
 </project>
