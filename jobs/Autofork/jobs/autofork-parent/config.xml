@@ -50,7 +50,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd java/autofork-task-parent
+      <command>cd java
 mvn clean install deploy</command>
     </hudson.tasks.Shell>
   </builders>
