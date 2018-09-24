@@ -5,5 +5,5 @@
   <token>1p2EW4ATrZtPmIncdxwhVqDb</token>
   <tokenCredentialId></tokenCredentialId>
   <botUser>false</botUser>
-  <room>#wózki</room>
+  <room>#wozki_build</room>
 </jenkins.plugins.slack.SlackNotifier_-DescriptorImpl>
