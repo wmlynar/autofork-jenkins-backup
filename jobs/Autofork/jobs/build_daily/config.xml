@@ -19,7 +19,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
@@ -43,10 +42,9 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <hudson.triggers.SCMTrigger>
-      <spec>H/15 * * * *</spec>
-      <ignorePostCommitHooks>false</ignorePostCommitHooks>
-    </hudson.triggers.SCMTrigger>
+    <hudson.triggers.TimerTrigger>
+      <spec>H 9 * * *</spec>
+    </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
@@ -64,7 +62,7 @@ mvn clean install deploy</command>
     </hudson.tasks.junit.JUnitResultArchiver>
     <tools.devnull.jenkins.plugins.buildnotifications.SlackNotifier plugin="build-notifications@1.5.0">
       <globalTarget></globalTarget>
-      <successfulTarget></successfulTarget>
+      <successfulTarget>daily build succeeded </successfulTarget>
       <brokenTarget></brokenTarget>
       <stillBrokenTarget></stillBrokenTarget>
       <fixedTarget></fixedTarget>
@@ -77,15 +75,15 @@ mvn clean install deploy</command>
       <authToken></authToken>
       <authTokenCredentialId></authTokenCredentialId>
       <botUser>false</botUser>
-      <room></room>
-      <startNotification>true</startNotification>
-      <notifySuccess>true</notifySuccess>
+      <room>#wózki</room>
+      <startNotification>false</startNotification>
+      <notifySuccess>false</notifySuccess>
       <notifyAborted>true</notifyAborted>
       <notifyNotBuilt>true</notifyNotBuilt>
       <notifyUnstable>true</notifyUnstable>
       <notifyRegression>true</notifyRegression>
       <notifyFailure>true</notifyFailure>
-      <notifyBackToNormal>true</notifyBackToNormal>
+      <notifyBackToNormal>false</notifyBackToNormal>
       <notifyRepeatedFailure>true</notifyRepeatedFailure>
       <includeTestSummary>false</includeTestSummary>
       <includeFailedTests>false</includeFailedTests>
