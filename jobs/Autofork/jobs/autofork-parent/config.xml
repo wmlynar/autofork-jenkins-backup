@@ -77,8 +77,8 @@ mvn clean install deploy</command>
       <authTokenCredentialId></authTokenCredentialId>
       <botUser>false</botUser>
       <room></room>
-      <startNotification>true</startNotification>
-      <notifySuccess>true</notifySuccess>
+      <startNotification>false</startNotification>
+      <notifySuccess>false</notifySuccess>
       <notifyAborted>true</notifyAborted>
       <notifyNotBuilt>true</notifyNotBuilt>
       <notifyUnstable>true</notifyUnstable>
