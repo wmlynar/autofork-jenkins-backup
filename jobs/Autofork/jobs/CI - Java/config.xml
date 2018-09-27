@@ -51,7 +51,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd java
-mvn clean install</command>
+mvn install</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
