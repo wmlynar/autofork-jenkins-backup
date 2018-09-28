@@ -50,10 +50,9 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
-pwd
 source /opt/ros/kinetic/setup.bash
-./scripts/install_dependencies.sh
-./scripts/catkin_make_release.sh</command>
+`pwd`/scripts/install_dependencies.sh
+`pwd`/scripts/catkin_make_release.sh</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
