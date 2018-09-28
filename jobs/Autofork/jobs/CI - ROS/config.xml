@@ -49,8 +49,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>source /opt/ros/kinetic/setup.bash
-pwd</command>
+      <command>#!/bin/bash
+pwd
+source /opt/ros/kinetic/setup.bash</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
