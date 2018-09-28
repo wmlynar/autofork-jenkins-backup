@@ -43,7 +43,15 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <builders/>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>mkdir src
+mv autonomiczne-wozki-widlowe src
+source /opt/ros/kinetic/setup.bash
+./src/autonomiczne-wozki-widlowe/scripts/install_dependencies.sh
+./src/autonomiczne-wozki-widlowe/scripts/catkin_make_release.sh</command>
+    </hudson.tasks.Shell>
+  </builders>
   <publishers/>
   <buildWrappers/>
 </project>
