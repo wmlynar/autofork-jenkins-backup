@@ -35,7 +35,11 @@
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        <relativeTargetDir>src</relativeTargetDir>
+      </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+    </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -45,9 +49,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>mkdir src
-mv autonomiczne-wozki-widlowe src
-source /opt/ros/kinetic/setup.bash
+      <command>source /opt/ros/kinetic/setup.bash
 ./src/autonomiczne-wozki-widlowe/scripts/install_dependencies.sh
 ./src/autonomiczne-wozki-widlowe/scripts/catkin_make_release.sh</command>
     </hudson.tasks.Shell>
