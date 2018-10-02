@@ -58,8 +58,7 @@
 dir=`pwd`
 source /opt/ros/kinetic/setup.bash
 rosdep update
-&quot;$dir&quot;/src/scripts/install_dependencies.sh
-&quot;$dir&quot;/src/scripts/catkin_make_release.sh</command>
+catkin_make -DCMAKE_BUILD_TYPE=Release</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
