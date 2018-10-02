@@ -57,7 +57,7 @@
       <command>#!/bin/bash
 dir=`pwd`
 source /opt/ros/kinetic/setup.bash
-rosdep update
+rm -r build devel
 catkin_make -DCMAKE_BUILD_TYPE=Release</command>
     </hudson.tasks.Shell>
   </builders>
