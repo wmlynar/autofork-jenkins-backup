@@ -49,8 +49,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd java
-mvn clean install deploy</command>
+      <command>#!/bin/bash
+dir=`pwd`
+source /opt/ros/kinetic/setup.bash
+rm -r build devel
+catkin_make -DCMAKE_BUILD_TYPE=Release
+cd src/java
+mvn clean install</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
