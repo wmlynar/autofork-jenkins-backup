@@ -92,7 +92,7 @@ mvn clean install</command>
       <notifyUnstable>true</notifyUnstable>
       <notifyRegression>true</notifyRegression>
       <notifyFailure>true</notifyFailure>
-      <notifyBackToNormal>false</notifyBackToNormal>
+      <notifyBackToNormal>true</notifyBackToNormal>
       <notifyRepeatedFailure>true</notifyRepeatedFailure>
       <includeTestSummary>false</includeTestSummary>
       <includeFailedTests>false</includeFailedTests>
