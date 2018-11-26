@@ -57,7 +57,7 @@
       <command>#!/bin/bash
 source /opt/ros/kinetic/setup.bash
 rm -r build devel
-echo $(pwd)
+echo $(ls)
 ./autonomiczne-wozki-widlowe/scripts/catkin_make_release.sh</command>
     </hudson.tasks.Shell>
   </builders>
