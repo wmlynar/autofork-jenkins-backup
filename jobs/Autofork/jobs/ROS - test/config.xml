@@ -19,7 +19,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
@@ -56,10 +55,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
-dir=`pwd`
 source /opt/ros/kinetic/setup.bash
 rm -r build devel
-catkin_make -DCMAKE_BUILD_TYPE=Release</command>
+echo $(pwd)
+./autonomiczne-wozki-widlowe/scripts/catkin_make_release.sh</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
