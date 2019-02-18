@@ -31,7 +31,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command># checkout repositories
-sudo rm -rf *
+rm -rf *
 git clone https://github.com/wmlynar/ros2_java
 git clone https://github.com/wmlynar/ros2_java_examples
 git clone https://github.com/wmlynar/ros2_java_maven
