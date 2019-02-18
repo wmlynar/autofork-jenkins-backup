@@ -21,7 +21,31 @@
       <paramsToUseForLimit></paramsToUseForLimit>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
-  <scm class="hudson.scm.NullSCM"/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/wmlynar/ros2_java</url>
+      </hudson.plugins.git.UserRemoteConfig>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/wmlynar/ros2_java_examples</url>
+      </hudson.plugins.git.UserRemoteConfig>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/wmlynar/ros2_java_maven</url>
+      </hudson.plugins.git.UserRemoteConfig>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/wmlynar/ros2_java_maven_repo</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
@@ -30,10 +54,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>git clone https://github.com/wmlynar/ros2_java
-git clone https://github.com/wmlynar/ros2_java_examples
-git clone https://github.com/wmlynar/ros2_java_maven
-git clone https://github.com/wmlynar/ros2_java_maven_repo
+      <command>#git clone https://github.com/wmlynar/ros2_java
+#git clone https://github.com/wmlynar/ros2_java_examples
+#git clone https://github.com/wmlynar/ros2_java_maven
+#git clone https://github.com/wmlynar/ros2_java_maven_repo
 # build ros2_java
 docker run -v &quot;$(pwd):/root/ros2_java_maven_ws&quot; -w &quot;/root/ros2_java_maven_ws&quot; -t xenial_ros2_java sh -c &quot;. ~/ament_ws/install_isolated/local_setup.sh &amp;&amp; ament build --symlink-install --isolated --only-packages rcljava rcljava_examples&quot;
 </command>
