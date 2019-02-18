@@ -59,7 +59,7 @@
 #git clone https://github.com/wmlynar/ros2_java_maven
 #git clone https://github.com/wmlynar/ros2_java_maven_repo
 # build ros2_java
-docker run -v &quot;$(pwd):/root/ros2_java_maven_ws&quot; -w &quot;/root/ros2_java_maven_ws&quot; -t xenial_ros2_java sh -c &quot;. ~/ament_ws/install_isolated/local_setup.sh &amp;&amp; ament build --symlink-install --isolated --only-packages rcljava rcljava_examples&quot;
+docker run -v &quot;$(pwd):/root/ros2_java_maven_ws/src/ros2_java&quot; -w &quot;/root/ros2_java_maven_ws&quot; -t xenial_ros2_java sh -c &quot;. ~/ament_ws/install_isolated/local_setup.sh &amp;&amp; ament build --symlink-install --isolated --only-packages rcljava rcljava_examples&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>
