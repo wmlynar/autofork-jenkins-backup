@@ -51,7 +51,7 @@
     <hudson.tasks.Shell>
       <command>cd docker/xenial
 # --no-cache 
-docker build -t xenial_ros2_java .</command>
+docker build --no-cache -t xenial_ros2_java .</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
