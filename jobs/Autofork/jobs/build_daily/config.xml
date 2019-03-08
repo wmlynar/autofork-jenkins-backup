@@ -54,9 +54,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
+set -e
 dir=`pwd`
 source /opt/ros/kinetic/setup.bash
-rm -r build devel src/CMakeLists.txt
+rm -r build devel src/CMakeLists.txt || true
 catkin_make -DCMAKE_BUILD_TYPE=Release
 cd src/java
 mvn clean install</command>
