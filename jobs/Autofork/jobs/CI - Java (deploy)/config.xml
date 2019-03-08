@@ -55,12 +55,14 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
+set -e
 dir=`pwd`
 source /opt/ros/kinetic/setup.bash
 rm -r build devel src/CMakeLists.txt
 catkin_make -DCMAKE_BUILD_TYPE=Release
 cd src/java
 mvn clean deploy</command>
+      <unstableReturn>1</unstableReturn>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
