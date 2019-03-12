@@ -23,7 +23,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.3">
@@ -50,9 +49,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd docker/xenial
+      <command>cd docker/bionic
 # --no-cache 
-docker build -t xenial_ros2_java .</command>
+docker build --no-cache -t bionic_ros2_java .</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
