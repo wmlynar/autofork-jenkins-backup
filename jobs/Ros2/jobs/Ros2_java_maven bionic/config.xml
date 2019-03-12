@@ -40,7 +40,7 @@ git clone https://github.com/wmlynar/ros2_java_tf
 git clone https://github.com/wmlynar/ros2_java_launch
 #rm ros2_java_maven_repo/org/ros2/java/*
 # build ros2_java
-docker run -u &quot;$UID&quot; -v &quot;$(pwd):/root/ros2_java_ws/src/ros2_java&quot; -w &quot;/root/ros2_java_ws&quot; -t bionic_ros2_java sh -c &quot;. ~/ament_ws/install_isolated/local_setup.sh &amp;&amp; ament build --symlink-install --isolated --only-packages rcljava rcljava_examples &amp;&amp; cd src/ros2_java/ros2_java_maven &amp;&amp; mvn install &amp;&amp; ./install.sh &amp;&amp; cp -r ~/.m2/repository/org/ros2/java/* ../ros2_java_maven_repo/org/ros2/java/&quot;
+docker run -u &quot;$UID&quot; -v &quot;$(pwd):/root/ros2_java_ws/src/ros2_java&quot; -w &quot;/root/ros2_java_ws&quot; -t bionic_ros2_java sh -c &quot;cd src/ros2_java/ros2_java_maven &amp;&amp; ./install_maven.sh &amp;&amp; cp -r ~/.m2/repository/org/ros2/java/* ../ros2_java_maven_repo/org/ros2/java/&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>
