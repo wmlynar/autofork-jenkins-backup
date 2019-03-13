@@ -4,10 +4,10 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.9">
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.11">
       <gitLabConnection></gitLabConnection>
     </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
@@ -21,7 +21,7 @@
       <paramsToUseForLimit></paramsToUseForLimit>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.3">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -60,7 +60,6 @@ dir=`pwd`
 source /opt/ros/kinetic/setup.bash
 rm -r build devel src/CMakeLists.txt || true
 catkin_make -DCMAKE_BUILD_TYPE=Release</command>
-      <unstableReturn>1</unstableReturn>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -73,11 +72,11 @@ catkin_make -DCMAKE_BUILD_TYPE=Release</command>
       <sendIfSuccess>false</sendIfSuccess>
       <extraMessage></extraMessage>
     </tools.devnull.jenkins.plugins.buildnotifications.SlackNotifier>
-    <jenkins.plugins.slack.SlackNotifier plugin="slack@2.3">
+    <jenkins.plugins.slack.SlackNotifier plugin="slack@2.18">
       <baseUrl></baseUrl>
       <teamDomain></teamDomain>
       <authToken></authToken>
-      <authTokenCredentialId></authTokenCredentialId>
+      <tokenCredentialId></tokenCredentialId>
       <botUser>false</botUser>
       <room></room>
       <startNotification>false</startNotification>
@@ -94,6 +93,11 @@ catkin_make -DCMAKE_BUILD_TYPE=Release</command>
       <commitInfoChoice>NONE</commitInfoChoice>
       <includeCustomMessage>false</includeCustomMessage>
       <customMessage></customMessage>
+      <customMessageSuccess></customMessageSuccess>
+      <customMessageAborted></customMessageAborted>
+      <customMessageNotBuilt></customMessageNotBuilt>
+      <customMessageUnstable></customMessageUnstable>
+      <customMessageFailure></customMessageFailure>
     </jenkins.plugins.slack.SlackNotifier>
   </publishers>
   <buildWrappers/>
