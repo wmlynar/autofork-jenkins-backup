@@ -51,8 +51,8 @@
     <hudson.tasks.Shell>
       <command>cd docker/bionic_opensplice
 # --no-cache 
-#docker build --no-cache -t bionic_ros2_java .
-docker build --no-cache -t bionic_opensplice_ros2_java .</command>
+#docker build --no-cache -t bionic_opensplice_ros2_java .
+docker build -t bionic_opensplice_ros2_java .</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
