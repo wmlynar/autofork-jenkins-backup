@@ -19,7 +19,6 @@
       <throttleOption>project</throttleOption>
       <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
       <paramsToUseForLimit></paramsToUseForLimit>
-      <configVersion>1</configVersion>
     </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
@@ -41,7 +40,7 @@ git clone https://github.com/wmlynar/ros2_java_tf
 git clone https://github.com/wmlynar/ros2_java_launch
 #rm ros2_java_maven_repo/org/ros2/java/*
 # build ros2_java
-docker run -u &quot;$UID&quot; -v &quot;$(pwd):/root/ros2_java_ws/src/ros2_java&quot; -w &quot;/root/ros2_java_ws&quot; -t xenial_ros2_java sh -c &quot;cd src/ros2_java/ros2_java_maven &amp;&amp; ./install_maven.sh&quot;
+docker run -u &quot;$UID&quot; -v &quot;$(pwd):/root/ros2_java_ws/src/ros2_java&quot; -w &quot;/root/ros2_java_ws&quot; -t xenial_opensplice_ros2_java sh -c &quot;cd src/ros2_java/ros2_java_maven &amp;&amp; ./install_maven.sh&quot;
 </command>
     </hudson.tasks.Shell>
   </builders>
