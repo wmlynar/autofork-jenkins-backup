@@ -51,7 +51,8 @@
     <hudson.tasks.Shell>
       <command>cd docker/xenial_opensplice
 # --no-cache 
-docker build --no-cache -t xenial_opensplice_ros2_java .</command>
+#docker build --no-cache -t xenial_opensplice_ros2_java .
+docker build -t xenial_opensplice_ros2_java .</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
