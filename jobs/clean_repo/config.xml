@@ -34,7 +34,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>rm -r /var/lib/jenkins/.m2/repository
+      <command>rm -r /var/lib/jenkins/.m2/repository || true
 mkdir ros2java
 cd ros2java
 git clone https://github.com/wmlynar/ros2_java_di.git
