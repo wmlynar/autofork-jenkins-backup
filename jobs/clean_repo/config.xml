@@ -41,7 +41,7 @@ git clone https://github.com/wmlynar/ros2_java_di.git
 git clone https://github.com/wmlynar/ros2_java_di_example.git
 git clone https://github.com/wmlynar/ros2_java_tf.git
 git clone https://github.com/wmlynar/ros2_java_launch.git
-cd ros2java_di
+cd ros2_java_di
 mvn clean install
 cd ../ros2_java_di_example
 mvn clean install
