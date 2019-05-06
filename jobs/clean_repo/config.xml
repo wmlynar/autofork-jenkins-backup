@@ -36,20 +36,20 @@
     <hudson.tasks.Shell>
       <command>rm -r /var/lib/jenkins/.m2/repository || true
 rm -r * || true
-mkdir ros2java
-cd ros2java
-git clone https://github.com/wmlynar/ros2_java_di.git
-git clone https://github.com/wmlynar/ros2_java_di_example.git
-git clone https://github.com/wmlynar/ros2_java_tf.git
-git clone https://github.com/wmlynar/ros2_java_launch.git
-cd ros2_java_di
-mvn clean install
-cd ../ros2_java_di_example
-mvn clean install
-cd ../ros2_java_tf
-mvn clean install
-cd ../ros2_java_launch
-mvn clean install</command>
+#mkdir ros2java
+#cd ros2java
+#git clone https://github.com/wmlynar/ros2_java_di.git
+#git clone https://github.com/wmlynar/ros2_java_di_example.git
+#git clone https://github.com/wmlynar/ros2_java_tf.git
+#git clone https://github.com/wmlynar/ros2_java_launch.git
+#cd ros2_java_di
+#mvn clean install
+#cd ../ros2_java_di_example
+#mvn clean install
+#cd ../ros2_java_tf
+#mvn clean install
+#cd ../ros2_java_launch
+#mvn clean install</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
